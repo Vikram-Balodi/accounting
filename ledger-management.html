@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ledger Management - Your Company</title>
+  <link rel="stylesheet" href="ledger-management.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo-container">
+      <img src="logo.jpg" alt="Your Company Logo" class="logo">
+      <h1>Vikram and Team</h1>
+    </div>
+    <p>Tailored for Modern Indian Accounting Needs</p>
+  </header>
+
+  <!-- Navbar -->
+  <nav>
+    <ul>
+      <li><a href="#masters">Masters</a>
+        <ul class="dropdown">
+          <li><a href="#" id="create-ledger-btn">Create Ledger</a></li>
+          <li><a href="#" id="alter-ledger-btn">Alter Ledger</a></li>
+        </ul>
+      </li>
+      <!-- Add other navigation items as needed -->
+    </ul>
+  </nav>
+
+  <!-- Main Content Section -->
+  <main>
+    <section class="hero-section">
+      <h2>Welcome to Ledger Management</h2>
+      <p>Manage your ledgers for creditors, debtors, and other entities.</p>
+    </section>
+
+    <!-- Ledger Management Forms (Initially hidden) -->
+    <div id="ledger-forms">
+      <!-- Create Ledger Form -->
+      <div id="create-ledger-form" class="ledger-form">
+        <h3>Create New Ledger</h3>
+        <form id="create-form">
+          <label for="ledger-name">Ledger Name</label>
+          <input type="text" id="ledger-name" name="ledger-name" required placeholder="Enter Ledger Name">
+          
+          <label for="ledger-type">Ledger Type</label>
+          <select id="ledger-type" name="ledger-type">
+            <option value="Sundry Creditors">Sundry Creditors</option>
+            <option value="Sundry Debtors">Sundry Debtors</option>
+            <option value="Bank Accounts">Bank Accounts</option>
+            <option value="Others">Others</option>
+          </select>
+
+          <button type="submit" class="btn-primary">Create Ledger</button>
+        </form>
+      </div>
+
+      <!-- Alter Ledger Form -->
+      <div id="alter-ledger-form" class="ledger-form" style="display:none;">
+        <h3>Alter Ledger</h3>
+        <form id="alter-form">
+          <label for="existing-ledger">Select Ledger to Alter</label>
+          <select id="existing-ledger" name="existing-ledger">
+            <!-- Options will be dynamically populated based on created ledgers -->
+          </select>
+
+          <label for="new-ledger-name">New Ledger Name</label>
+          <input type="text" id="new-ledger-name" name="new-ledger-name" placeholder="Enter New Ledger Name" required>
+          
+          <label for="new-ledger-type">New Ledger Type</label>
+          <select id="new-ledger-type" name="new-ledger-type">
+            <option value="Sundry Creditors">Sundry Creditors</option>
+            <option value="Sundry Debtors">Sundry Debtors</option>
+            <option value="Bank Accounts">Bank Accounts</option>
+            <option value="Others">Others</option>
+          </select>
+
+          <button type="submit" class="btn-primary">Alter Ledger</button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2024 Your Company. All rights reserved.</p>
+    <p>Contact us at: <a href="mailto:info@yourcompany.com">info@yourcompany.com</a></p>
+    <a href="index.html" class="home-button">Go to Main Website</a>
+  </footer>
+
+  <script>
+    // jQuery to toggle visibility between Create and Alter Ledger forms
+    $(document).ready(function() {
+      $('#create-ledger-btn').click(function() {
+        $('#create-ledger-form').show();
+        $('#alter-ledger-form').hide();
+      });
+
+      $('#alter-ledger-btn').click(function() {
+        $('#alter-ledger-form').show();
+        $('#create-ledger-form').hide();
+      });
+
+      // Handle create ledger form submission
+      $('#create-form').submit(function(e) {
+        e.preventDefault();
+        const ledgerName = $('#ledger-name').val();
+        const ledgerType = $('#ledger-type').val();
+
+        // Simulate ledger creation (in a real app, this data would be saved to a backend or database)
+        alert('Ledger Created: ' + ledgerName + ' (' + ledgerType + ')');
+        $('#create-form')[0].reset();
+      });
+
+      // Handle alter ledger form submission
+      $('#alter-form').submit(function(e) {
+        e.preventDefault();
+        const existingLedger = $('#existing-ledger').val();
+        const newLedgerName = $('#new-ledger-name').val();
+        const newLedgerType = $('#new-ledger-type').val();
+
+        // Simulate ledger alteration (in a real app, this would be saved to a backend or database)
+        alert('Ledger Altered: ' + existingLedger + ' changed to ' + newLedgerName + ' (' + newLedgerType + ')');
+        $('#alter-form')[0].reset();
+      });
+    });
+  </script>
+
+</body>
+</html>

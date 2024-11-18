@@ -1,0 +1,594 @@
+/* General Styling */
+body {
+    font-family: 'Cambria', serif;
+    background: linear-gradient(45deg, #101820, #2C5364);
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styling */
+.header {
+    background: rgba(82, 185, 187, 0.385);
+    padding: 10px;
+    border-bottom: 2px solid #00f3ff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Ensures it stays on top */
+}
+
+.logo {
+    height: 80px;
+    width: 110px;
+    margin-right: 20px;
+    margin-left: 15px;
+}
+
+.nav-link:hover {
+    text-shadow: 0 0 10px #00f3ff;
+}
+
+/* Adjust the body or main content to avoid being hidden behind the fixed header */
+main {
+    padding-top: 0px; /* Adjust this value based on the height of your header */
+}
+
+/* Hero Section */
+.intro {
+    background: url('Group-photo.png') center/cover no-repeat;
+    color: #fff;
+    padding: 100px 20px;
+    position: relative;
+}
+
+.intro::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+.intro h1,
+.intro p {
+    position: relative;
+    z-index: 2;
+}
+
+.action-buttons .btn {
+    margin: 10px;
+    padding: 15px 30px;
+    border-radius: 25px;
+    background: linear-gradient(90deg, #00f3ff, #00b3ff);
+    color: #000;
+    text-shadow: 0 0 5px #00f3ff;
+    transition: all 0.4s ease;
+}
+
+.action-buttons .btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px #00f3ff;
+}
+
+/* Features Section */
+.features {
+    padding: 50px 20px;
+    background: linear-gradient(90deg, #101820, #2c5364);
+    color: #fff;
+}
+
+.feature-box {
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-box:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(0, 243, 255, 0.8);
+}
+
+.feature-box i {
+    font-size: 3rem;
+    color: #00f3ff;
+    margin-bottom: 10px;
+}
+
+/* Footer Section */
+.footer {
+    background: linear-gradient(90deg, #2C5364, #0F2027);
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    flex: 1;
+    padding: 20px;
+    margin: 10px;
+    text-align: left;
+}
+
+.footer-section h3 {
+    color: #00f3ff;
+    text-shadow: 0 0 10px #00f3ff;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 10px 0;
+}
+
+.footer-section ul li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.map-container iframe {
+    border-radius: 10px;
+}
+
+/* Services Section */
+.services {
+    padding: 50px 20px;
+    background: linear-gradient(90deg, #2C5364, #0F2027);
+    color: #ffffff;
+    margin-top: 50px;
+}
+
+/* Section Title */
+.section-title {
+    font-size: 2.5rem;
+    color: #00f3ff;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px #00f3ff;
+}
+
+/* Section Description */
+.section-description {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+
+/* Service Card */
+.service-card {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid #00f3ff;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px #00f3ff;
+}
+
+.service-card i {
+    font-size: 3rem;
+    color: #00f3ff;
+    margin-bottom: 15px;
+}
+
+.service-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+/* About Us Page Styling */
+body {
+    font-family: 'Cambria', serif;
+}
+
+/* Introduction Section */
+.intro {
+    background: linear-gradient(45deg, #101820, #2C5364); /* Maintains the header's gradient */
+    color: #fff;
+    padding: 80px 20px;
+    margin-top: 50px;
+}
+
+.intro h1 {
+    font-size: 3rem;
+    text-shadow: 0 0 10px #00f3ff; /* Keeps the glowing effect */
+    margin-bottom: 20px;
+}
+
+/* Mission & Vision Section */
+.mission-vision {
+    padding: 60px 20px;
+    background: #0f2027; /* Dark background */
+    color: #fff;
+}
+
+.mission-vision h2 {
+    font-size: 2.5rem;
+    color: #00f3ff; /* Glowing blue effect */
+    margin-bottom: 30px;
+}
+
+/* Team Section */
+.team {
+    padding: 60px 20px;
+    background: linear-gradient(45deg, #2C5364, #0f2027); /* Gradient background */
+    color: #fff;
+}
+
+.team h2 {
+    font-size: 2.5rem;
+    color: #00f3ff; /* Glowing text */
+    margin-bottom: 30px;
+}
+
+/* Team Member Styling */
+.team-member {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.team-img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #00f3ff; /* Blue border */
+    margin-bottom: 10px;
+}
+
+/* Core Values Section */
+.core-values {
+    padding: 60px 20px;
+    background: #101820; /* Dark background */
+    color: #fff;
+}
+
+.core-values h2 {
+    font-size: 2.5rem;
+    color: #00f3ff; /* Glowing text */
+    margin-bottom: 20px;
+}
+
+.core-values ul {
+    list-style: none;
+    padding: 0;
+}
+
+.core-values li {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+/* Call to Action Section */
+.cta {
+    padding: 40px 20px;
+    background: #00f3ff; /* Glowing blue background */
+    text-align: center;
+}
+
+.cta .btn {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    background-color: #0f2027; /* Dark background for button */
+    color: white;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.cta .btn:hover {
+    background-color: #00b3ff; /* Lighter blue hover */
+    transform: scale(1.05);
+}
+
+/* Contact Page Styling */
+@keyframes glowInput {
+    0% {
+        border-color: #00f3ff;
+        box-shadow: 0 0 5px #00f3ff;
+    }
+    100% {
+        border-color: #ff0066;
+        box-shadow: 0 0 15px #ff0066;
+    }
+}
+
+@keyframes fadeInContact {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* General Contact Page Styling */
+.contact-page {
+    font-family: 'Cambria', serif;
+    color: #fff;
+    background: linear-gradient(45deg, #101820, #2C5364);
+    padding: 50px 20px;
+    margin-top: 100px;
+}
+
+/* Contact Form */
+.contact-form {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0 0 15px rgba(0, 243, 255, 0.5);
+    animation: fadeInContact 1.5s ease-out;
+}
+
+.contact-form h2 {
+    font-size: 2.5rem;
+    color: #00f3ff;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: 2px solid #00f3ff;
+    border-radius: 8px;
+    background: transparent;
+    color: #fff;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    animation: glowInput 1.5s infinite alternate;
+}
+
+/* Submit Button */
+.contact-form button {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.2rem;
+    color: #fff;
+    background: #00f3ff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.contact-form button:hover {
+    background: #ff0066;
+    transform: scale(1.05);
+}
+
+/* Contact Information Section */
+.contact-info {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 40px;
+    margin-top: 40px;
+    box-shadow: 0 0 15px rgba(0, 243, 255, 0.5);
+    animation: fadeInContact 1.5s ease-out;
+}
+
+.contact-info h3 {
+    font-size: 2rem;
+    color: #00f3ff;
+    margin-bottom: 15px;
+}
+
+.contact-info p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.contact-info a {
+    color: #00f3ff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: #ff0066;
+}
+
+/* Map Section */
+.map-container {
+    width: 100%;
+    height: 400px;
+    margin-top: 40px;
+    position: relative;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    animation: fadeInContact 1.5s ease-out;
+}
+
+/* Glow Animation for Map */
+.map-container:hover iframe {
+    box-shadow: 0 0 20px #00f3ff, 0 0 40px #00f3ff;
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+
+/* Footer - Same as other pages */
+footer {
+    padding: 20px;
+    background: #101820;
+    color: #fff;
+    text-align: center;
+}
+
+footer a {
+    color: #00f3ff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #ff0066;
+}
+
+/* Accounting Tabs Custom Styling */
+.accounting-tabs .nav-link {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.accounting-tabs .tab-pane {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.accounting-tabs .nav-tabs .nav-link.active {
+  background-color: #007bff;
+  color: #fff;
+  border-color: #007bff;
+}
+
+.accounting-tabs .section-title {
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Add space for the navbar */
+body {
+    font-family: 'Cambria', serif;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    padding-top: 80px; /* Adjust this value as needed to create space below the navbar */
+}
+
+.container {
+    padding-top: 20px; /* Adds space inside the container */
+}
+
+/* General Body Style */
+body {
+    font-family: 'Cambria', serif;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    padding-top: 80px; /* Add space below the fixed navbar */
+  }
+  
+  /* Login Box Styling */
+  .card {
+    background: rgba(0, 0, 0, 0.7); /* Transparent background for futuristic effect */
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 255, 255, 0.3); /* Glowing shadow effect */
+    border: 2px solid rgba(0, 255, 255, 0.4); /* Light glowing border */
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .card:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    box-shadow: 0 8px 30px rgba(0, 255, 255, 0.5); /* Stronger glowing effect */
+    border: 2px solid rgba(0, 255, 255, 0.6); /* Glow increases on hover */
+  }
+  
+  .card-body {
+    padding: 40px;
+    background: rgba(81, 228, 221, 0.437); /* Darken the background */
+    border-radius: 10px;
+    backdrop-filter: blur(5px); /* Blur the background for a glass-like effect */
+  }
+  
+  /* Title and Text */
+  h2 {
+    color: #00ffff;
+    font-size: 2em;
+    text-align: center;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.7); /* Glowing text */
+  }
+  
+  p {
+    color: #ffffff;
+    text-align: center;
+    font-size: 1em;
+  }
+  
+  /* Input Fields */
+  .form-control {
+    background: rgba(0, 0, 0, 0.6);
+    border: 2px solid rgba(0, 255, 255, 0.3);
+    color: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    font-size: 1em;
+    transition: all 0.3s ease;
+  }
+  
+  .form-control:focus {
+    border-color: #00ffff;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.6);
+    outline: none;
+  }
+  
+  /* Button Styling */
+  .btn-primary {
+    background: linear-gradient(135deg, #00ffff, #00ffcc);
+    border: none;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 5px 15px rgba(0, 255, 255, 0.5);
+    transition: all 0.3s ease;
+  }
+  
+  .btn-primary:hover {
+    background: linear-gradient(135deg, #00ccff, #00ffff);
+    transform: translateY(-5px); /* Slight floating effect */
+    box-shadow: 0 10px 25px rgba(0, 255, 255, 0.7);
+  }
+  
+  /* Link Styling */
+  a {
+    color: #00ffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  a:hover {
+    color: #00ccff;
+    text-decoration: underline;
+  }
